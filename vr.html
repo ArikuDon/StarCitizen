@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<title>Star Citizen VR — Guide immersion</title>
+<meta name="description" content="Guide VR simple : Vulkan obligatoire, Quest 3 + Virtual Desktop, Wi-Fi 7 sans latence et conseils immersion." />
+<link rel="canonical" href="https://arikudon.github.io/StarCitizen/vr.html" />
+
+<style>
+:root{
+--bg:#050712; --panel:rgba(12,16,35,.72); --stroke:rgba(120,160,255,.18);
+--text:#eaf0ff; --muted:rgba(234,240,255,.72); --shadow:0 20px 80px rgba(0,0,0,.55);
+--radius:18px;
+}
+*{box-sizing:border-box;}
+body{
+margin:0;
+font-family:system-ui,Segoe UI,Roboto,Arial;
+color:var(--text);
+background:linear-gradient(180deg,#02030a,var(--bg));
+min-height:100vh;
+}
+.wrap{max-width:900px;margin:auto;padding:30px 16px;}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;}
+.chip{
+font-size:13px;color:var(--muted);
+border:1px solid rgba(255,255,255,.1);
+padding:6px 10px;border-radius:999px;text-decoration:none;
+}
+.panel{
+background:var(--panel);
+border:1px solid var(--stroke);
+border-radius:var(--radius);
+box-shadow:var(--shadow);
+padding:22px;
+}
+.step{
+margin-top:14px;
+padding:12px;
+border-radius:12px;
+background:rgba(255,255,255,.04);
+border:1px solid rgba(255,255,255,.1);
+}
+strong{color:white;}
+footer{text-align:center;margin-top:18px;font-size:12px;color:var(--muted);}
+</style>
+</head>
+
+<body>
+<div class="wrap">
+
+<header>
+<div>
+<h2>🕶️ Star Citizen VR</h2>
+<div style="font-size:13px;color:var(--muted)">Guide immersion rapide</div>
+</div>
+<nav>
+<a class="chip" href="./">Referral</a>
+</nav>
+</header>
+
+<div class="panel">
+
+<div class="step">
+<strong>1. Vulkan obligatoire</strong><br>
+Active Vulkan dans les options du jeu (et pas DirectX).  
+Sans Vulkan la VR indisponible.
+</div>
+
+<div class="step">
+<strong>2. Quest 3 + Virtual Desktop</strong><br>
+Lance Virtual Desktop puis démarre le jeu.  
+L’immersion est excellente en sans-fil avec un bon réseau.
+</div>
+
+<div class="step">
+<strong>3. Désactiver le miroir PC</strong><br>
+Ferme la fenêtre miroir SteamVR / VR sur le PC.  
+Elle consomme du GPU et peut provoquer du stutter inutile.
+</div>
+
+<div class="step">
+<strong>4. Wi-Fi 7 = latence quasi nulle</strong><br>
+Avec un routeur proche et un PC en Ethernet, le streaming devient très stable et proche d’une expérience filaire.
+</div>
+
+<div class="step">
+<strong>5. Limitation VR → FPS</strong><br>
+Une fois en VR, la transition vers les phases FPS n’est pas idéale.  
+À garder en tête selon ton style de jeu.
+</div>
+
+<div class="step">
+<strong>Conclusion :</strong><br>
+Active Vulkan → lance Virtual Desktop → démarre le jeu → <strong>bim immersion totale</strong>.
+</div>
+
+</div>
+
+<footer>
+Page VR non officielle • Ariku_Dono
+</footer>
+
+</div>
+</body>
+</html>
