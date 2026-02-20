@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Parrainage Star Citizen — TON-PSEUDO</title>
+  <meta name="description" content="Utilise mon code de parrainage Star Citizen pour obtenir le bonus à la création du compte. Guide rapide + lien direct." />
+  <link rel="canonical" href="https://TONPSEUDO.github.io/" />
+
+  <!-- Open Graph (aperçu Discord / réseaux) -->
+  <meta property="og:title" content="Parrainage Star Citizen — TON-PSEUDO" />
+  <meta property="og:description" content="Bonus de parrainage à l'inscription. Code + lien direct + guide ultra rapide." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://TONPSEUDO.github.io/" />
+  <!-- Tu pourras ajouter og:image après (voir étape 2) -->
+  <!-- <meta property="og:image" content="https://TONPSEUDO.github.io/og.jpg" /> -->
+
+  <style>
+    :root{
+      --bg:#050712;
+      --panel:rgba(12,16,35,.72);
+      --stroke:rgba(120,160,255,.18);
+      --text:#eaf0ff;
+      --muted:rgba(234,240,255,.72);
+      --accent:#6aa9ff;
+      --accent2:#9b7bff;
+      --ok:#39ffb6;
+      --shadow: 0 20px 80px rgba(0,0,0,.55);
+      --radius: 18px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 800px at 20% 10%, rgba(106,169,255,.25), transparent 60%),
+        radial-gradient(900px 700px at 80% 30%, rgba(155,123,255,.18), transparent 60%),
+        radial-gradient(800px 600px at 50% 80%, rgba(57,255,182,.10), transparent 60%),
+        linear-gradient(180deg, #02030a, var(--bg));
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+
+    /* petites “étoiles” */
+    .stars:before, .stars:after{
+      content:"";
+      position:fixed; inset:-200px;
+      background-image:
+        radial-gradient(2px 2px at 20% 30%, rgba(255,255,255,.35) 50%, transparent 55%),
+        radial-gradient(1px 1px at 70% 10%, rgba(255,255,255,.25) 50%, transparent 55%),
+        radial-gradient(1px 1px at 10% 80%, rgba(255,255,255,.20) 50%, transparent 55%),
+        radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,.18) 50%, transparent 55%),
+        radial-gradient(2px 2px at 40% 60%, rgba(255,255,255,.22) 50%, transparent 55%);
+      background-size: 420px 420px;
+      opacity:.55;
+      filter: blur(.2px);
+      pointer-events:none;
+      transform: translateZ(0);
+      animation: drift 18s linear infinite;
+    }
+    .stars:after{
+      opacity:.35;
+      background-size: 640px 640px;
+      animation-duration: 28s;
+    }
+    @keyframes drift{ from{ transform:translate3d(0,0,0); } to{ transform:translate3d(80px,40px,0);} }
+
+    .wrap{
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 34px 18px 60px;
+      position:relative;
+    }
+
+    header{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+      margin-bottom:18px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:12px;
+    }
+    .logo{
+      width:40px; height:40px; border-radius:12px;
+      background: linear-gradient(135deg, rgba(106,169,255,.95), rgba(155,123,255,.9));
+      box-shadow: 0 12px 40px rgba(106,169,255,.25);
+      position:relative;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:10px;
+      border-radius:10px;
+      background: rgba(5,7,18,.85);
+      border:1px solid rgba(255,255,255,.12);
+    }
+    .title{
+      line-height:1.1;
+    }
+    .title h1{
+      margin:0;
+      font-size: 18px;
+      letter-spacing:.4px;
+      font-weight:700;
+    }
+    .title p{
+      margin:4px 0 0;
+      color:var(--muted);
+      font-size:13px;
+    }
+
+    .toplinks{
+      display:flex; gap:10px; flex-wrap:wrap;
+    }
+    .chip{
+      font-size:13px;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+      padding:8px 10px;
+      border-radius: 999px;
+      text-decoration:none;
+    }
+    .chip:hover{ border-color: rgba(106,169,255,.35); color:var(--text); }
+
+    .hero{
+      margin-top:16px;
+      background: var(--panel);
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 26px 20px;
+      position:relative;
+      overflow:hidden;
+    }
+    .hero:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(600px 240px at 30% 10%, rgba(106,169,255,.25), transparent 60%),
+                  radial-gradient(520px 220px at 90% 60%, rgba(155,123,255,.20), transparent 60%);
+      pointer-events:none;
+      opacity:.85;
+    }
+
+    .grid{
+      position:relative;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+    }
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .big{
+      padding: 6px 2px;
+    }
+    .big h2{
+      margin:0;
+      font-size: 28px;
+      letter-spacing:.2px;
+    }
+    .big p{
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 55ch;
+    }
+
+    .card{
+      position:relative;
+      border-radius: var(--radius);
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(5,7,18,.55);
+      padding: 18px;
+    }
+
+    .codebox{
+      display:flex;
+      gap:10px;
+      align-items:center;
+      justify-content:space-between;
+      border:1px dashed rgba(106,169,255,.35);
+      background: rgba(106,169,255,.08);
+      border-radius: 14px;
+      padding: 12px 12px;
+      margin-top: 14px;
+    }
+    .code{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 18px;
+      letter-spacing: 2px;
+      font-weight: 700;
+    }
+    button.copy{
+      cursor:pointer;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 10px 12px;
+      font-size: 13px;
+    }
+    button.copy:hover{ border-color: rgba(106,169,255,.35); }
+
+    .cta{
+      display:flex;
+      gap: 12px;
+      flex-wrap:wrap;
+      margin-top: 14px;
+    }
+    a.btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      text-decoration:none;
+      padding: 13px 16px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.12);
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      font-weight:700;
+      font-size: 14px;
+      min-width: 220px;
+    }
+    a.btn.primary{
+      background: linear-gradient(135deg, rgba(106,169,255,.95), rgba(155,123,255,.9));
+      border: none;
+      box-shadow: 0 16px 50px rgba(106,169,255,.22);
+    }
+    a.btn:hover{ transform: translateY(-1px); }
+    a.btn:active{ transform: translateY(0px); }
+
+    .steps{
+      display:grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .step{
+      display:flex; gap:10px;
+      align-items:flex-start;
+      padding: 10px 12px;
+      border-radius: 14px;
+      border:1px solid rgba(255,255,255,.10);
+      background: rgba(255,255,255,.03);
+    }
+    .num{
+      width:26px; height:26px;
+      border-radius: 10px;
+      display:flex; align-items:center; justify-content:center;
+      font-weight:800;
+      background: rgba(57,255,182,.14);
+      border:1px solid rgba(57,255,182,.28);
+      color: rgba(57,255,182,.95);
+      flex: 0 0 auto;
+    }
+    .step p{ margin:0; color:var(--muted); font-size: 13px; line-height: 1.35; }
+
+    .note{
+      margin-top: 12px;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+
+    footer{
+      margin-top: 18px;
+      color: rgba(234,240,255,.55);
+      font-size: 12px;
+      text-align:center;
+    }
+    .tiny{
+      opacity:.8;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="stars"></div>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">
+          <h1>TON-PSEUDO</h1>
+          <p>Parrainage Star Citizen • landing page rapide</p>
+        </div>
+      </div>
+      <nav class="toplinks">
+        <a class="chip" href="#comment">Comment ça marche</a>
+        <a class="chip" href="#faq">FAQ</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="grid">
+        <div class="big">
+          <h2>🚀 Bonus de parrainage à l’inscription</h2>
+          <p>
+            Si tu débutes sur Star Citizen, tu peux entrer mon code lors de la création du compte pour obtenir
+            le bonus de parrainage (selon l’offre du moment). Ça ne te coûte rien.
+          </p>
+
+          <div class="codebox" role="group" aria-label="Code de parrainage">
+            <div>
+              <div class="tiny">Mon code :</div>
+              <div id="ref" class="code">TON-CODE-ICI</div>
+            </div>
+            <button class="copy" id="copyBtn" type="button">📋 Copier</button>
+          </div>
+
+          <div class="cta">
+            <a class="btn primary" id="enlistBtn" href="https://robertsspaceindustries.com/enlist?referral=TON-CODE-ICI" target="_blank" rel="noopener">
+              ✅ Créer un compte avec le code
+            </a>
+            <a class="btn" href="https://robertsspaceindustries.com/" target="_blank" rel="noopener">
+              Site officiel RSI
+            </a>
+          </div>
+
+          <div class="note">
+            Astuce : si le lien ne te pré-remplit pas le code, copie/colle-le au moment de l’inscription.
+          </div>
+        </div>
+
+        <aside class="card" id="comment">
+          <h3 style="margin:0 0 10px;font-size:16px;">🧭 Comment ça marche</h3>
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <p>Ouvre le lien “Créer un compte”.</p>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <p>Vérifie que le champ “Referral Code” contient bien <b>TON-CODE-ICI</b>.</p>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <p>Finalise l’inscription : tu reçois le bonus lié au programme (si actif).</p>
+            </div>
+          </div>
+
+          <div class="note" style="margin-top:12px;">
+            Je peux aussi t’aider à bien démarrer (settings, perf, premiers pas, etc.) si tu veux.
+          </div>
+        </aside>
+
+        <aside class="card" id="faq" style="grid-column: 1 / -1;">
+          <h3 style="margin:0 0 10px;font-size:16px;">❓ FAQ rapide</h3>
+          <div style="display:grid; gap:10px; grid-template-columns: 1fr 1fr;">
+            <div class="step">
+              <div class="num">Q</div>
+              <p><b>Ça me coûte quelque chose ?</b><br/>Non, c’est juste un code au moment de la création du compte.</p>
+            </div>
+            <div class="step">
+              <div class="num">Q</div>
+              <p><b>Le bonus est toujours le même ?</b><br/>Non, ça dépend des promos/referral en cours.</p>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> TON-PSEUDO • Page de parrainage</div>
+      <div class="tiny">Cette page n’est pas affiliée officiellement à CIG/RSI.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Copier le code
+    const ref = document.getElementById('ref');
+    const copyBtn = document.getElementById('copyBtn');
+
+    copyBtn.addEventListener('click', async () => {
+      try{
+        await navigator.clipboard.writeText(ref.textContent.trim());
+        copyBtn.textContent = "✅ Copié !";
+        setTimeout(() => copyBtn.textContent = "📋 Copier", 1400);
+      } catch(e){
+        // fallback
+        const r = document.createRange();
+        r.selectNode(ref);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(r);
+        document.execCommand('copy');
+        window.getSelection().removeAllRanges();
+        copyBtn.textContent = "✅ Copié !";
+        setTimeout(() => copyBtn.textContent = "📋 Copier", 1400);
+      }
+    });
+
+    // Année
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
